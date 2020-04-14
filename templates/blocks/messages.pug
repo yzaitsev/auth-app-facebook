@@ -1,0 +1,8 @@
+each msgValue, msgType in flash
+
+  - if (msgType === 'error') msgType = 'danger'
+      div(class=`alert alert-${msgType}`  role="alert")= msgValue
+
+
+
+

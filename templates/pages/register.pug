@@ -1,0 +1,22 @@
+extends ../layout.pug
+
+block content
+  section(class="register")
+    h2(class="register__title")
+     Please sign up
+    div(class="register__form ")
+      form(class="form" action="/auth/register" method="POST")
+        div(class="form-group")
+          label(for="exampleInputDisplayName") Full name:
+          input(type="text" name="displayName" class="form-control" id="exampleInputDisplayName")
+        div(class="form-group")
+          label(for="exampleInputEmail") Email address:
+          input(type="email" name="email" class="form-control" id="exampleInputEmail")
+        div(class="form-group")
+          label(for="passwordInput") Password:
+          input(type="password" name="password" class="form-control" id="passwordInput")
+        div(class="form-group")
+          label(for="photoInput") Path to photo link:
+          input(type="text" name="photo" class="form-control" id="photoInput")
+        div(class="form-group")
+          input(type="submit" class="btn btn-primary" value="Submit")

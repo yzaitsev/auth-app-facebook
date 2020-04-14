@@ -1,0 +1,18 @@
+extends ../layout.pug
+
+block content
+  section(class="login")
+    h2(class="login__title") Please sign in or 
+      a(class="login__link-register" href="/auth/register") sign up
+    div(class="login__form ")
+      form(class="form" action="/auth/login" method="POST")
+        div(class="form-group")
+          label(for="exampleInputEmail1") Email address:
+          input(type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp")
+        div(class="form-group")
+          label(for="exampleInputPassword1") Password:
+          input(type="password" name="password" class="form-control" id="exampleInputPassword1")
+        button(type="submit" class="btn btn-primary") Submit
+      ul(class="login__social-list")
+        li(class="login__social-item")
+          a(class="btn btn-primary" href="/login/facebook") via facebook
